@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://do721qqsw6tb3"]
+
+[ext_resource type="PackedScene" uid="uid://6pwbc2uwrin2" path="res://Blueprints/Player/skralagoo.tscn" id="1_rupst"]
+
+[node name="Playground" type="Node2D" unique_id=872017314]
+
+[node name="Skralagoo" parent="." unique_id=1886581473 instance=ExtResource("1_rupst")]
+position = Vector2(242, 129)

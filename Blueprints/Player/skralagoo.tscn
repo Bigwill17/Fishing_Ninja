@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://6pwbc2uwrin2"]
+
+[ext_resource type="Texture2D" uid="uid://l5sd8llrldai" path="res://SpriteSheets/Player/Skralagoo.png" id="1_af4uy"]
+[ext_resource type="Script" uid="uid://bxrwweq68rybu" path="res://Blueprints/Player/Scripts/player.gd" id="1_gf34m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt17y"]
+atlas = ExtResource("1_af4uy")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8u5f"]
+atlas = ExtResource("1_af4uy")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_is3ju"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt17y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8u5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Skralagoo" type="CharacterBody2D" unique_id=1886581473]
+script = ExtResource("1_gf34m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1760050891]
+shape = SubResource("CircleShape2D_edjgo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=741949435]
+sprite_frames = SubResource("SpriteFrames_is3ju")
+frame_progress = 0.6949475
